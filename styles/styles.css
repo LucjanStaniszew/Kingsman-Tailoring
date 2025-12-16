@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+/* colores */
+.clasegenerica{
+    /* Negro carbón */
+    color: #0A0A0A;
+    /* Dorado Suave */
+    color: #D6B679;
+    /* Gris Humo */
+    color: #F4F4F4;
+    /* Azul Noche */
+    color: #0E1A2A;
+    /* Blanco Puro */
+    color: #FFFFFF;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Imperial Script;
+    font-weight: 600;
+    color: #D6B679;
+}
+
+body{
+    background-color: #0E1A2A;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #0E1A2A;
+    padding: 0 25px;
+    height: 10vh;
+
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; */
+    /* display: grid; */
+    /* grid-template-areas: "logo title nav"; */
+    /* grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center; */
+}
+
+.navbar-toggler{
+    background-color: #D6B679;
+}
+
+.nav-link{
+    color: #D6B679;
+}
+
+.navbar-nav .nav-link.active{
+    color: #D6B679;
+    border: 1px solid #D6B679;
+    border-radius: 10px;
+}
+
+.encabezado a{
+    /* grid-area: logo; */
+    grid-column: 1/2;
+}
+.encabezado h1{
+    /* grid-area: title; */
+    grid-column: 2/3;
+}
+.encabezado nav{
+    /* grid-area: nav; */
+    grid-column: 3/4;
+}
+
+.logo{
+    height: 10vh;
+    width: auto;
+}
+
+img{
+    height: 50vh;
+    width: auto;
+    border-radius: 20px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+footer{
+    height: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rs{
+    height: 5vh;
+    width: auto;
+}
+
+.wa{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+/* Home */
+
+.main-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.main-home section{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-cont-dest{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.home-title{
+    color: #D6B679;
+    font-size: 48px;
+}
+
+.home-suit{
+    width: 30vw;
+    height: auto;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+.corb{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+.cint{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.zap{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.col-dest{
+    width: 20vw;
+    height: auto;
+}
+
+.home-title2{
+    color: #D6B679;
+    font-size: 32px;
+}
+
+.home-btns{
+    border: 2px solid #D6B679;
+    border-radius: 15px;
+    padding: 10px;
+    color: #D6B679;
+    font-size: 20px;
+    width: 15vw;
+    text-align: center;
+}
+
+/* Nosotros */
+
+.edward, .tailoring{
+    width: 50vw;
+    height: auto;
+}
+
+.main-history{
+    display: flex;
+    flex-direction: row;
+}
+
+.history{
+    width: 65vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.mmm{
+    width: 30vw;
+    height: auto;
+}
+
+.story{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.mapa{
+    height: 75vh;
+    width: 75vw;
+}
+
+/* Tienda */
+
+.store{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.store-section{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.store-card{
+    width: 20vw;
+    height: auto;
+    padding: 15px;
+    border: 2px solid #D6B679;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-tienda{
+    width: 15vw;
+    height: auto;
+}
+
+/* Galería */
+
+.main-gal{
+    display: grid;
+    grid-template-areas:
+    "cin1 tra1 tra2 cor1"
+    "cin2 tra1 tra2 cor2"
+    "cin3 tra3 tra4 cor3"
+    "cin4 tra3 tra4 cor4"
+    "zap1 zap2 zap3 zap4"
+    "ed ed neg neg"
+    ;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+.sq{
+    width: 20vw;
+    height: 20vw;
+}
+.ver{
+    height: 80vh;
+}
+.hor{
+    width: 40vw;
+    height: auto;
+}
+.cin1{
+    grid-area: cin1;
+}
+.cin2{
+    grid-area: cin2;
+}
+.cin3{
+    grid-area: cin3;
+}
+.cin4{
+    grid-area: cin4;
+}
+.tra1{
+    grid-area: tra1;
+}
+.tra2{
+    grid-area: tra2;
+}
+.tra3{
+    grid-area: tra3;
+}
+.tra4{
+    grid-area: tra4;
+}
+.cor1{
+    grid-area: cor1;
+}
+.cor2{
+    grid-area: cor2;
+}
+.cor3{
+    grid-area: cor3;
+}
+.cor4{
+    grid-area: cor4;
+}
+.zap1{
+    grid-area: zap1;
+}
+.zap2{
+    grid-area: zap2;
+}
+.zap3{
+    grid-area: zap3;
+}
+.zap4{
+    grid-area: zap4;
+}
+.ed{
+    grid-area: ed;
+}
+.neg{
+    grid-area: neg;
+}
+
+/* Contacto */
+.main-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 30vw;
+}
+.form-btns{
+    display: flex;
+    gap: 20px;
+}
+.form-btn{
+    border: 3px solid #D6B679;
+    background-color: #0E1A2A;
+    padding: 10px;
+    border-radius: 15px;
+}
+.maps{
+    order: 1;
+    width: 30vw;
+}
+.video{
+    order: 3;
+    width: 30vw;
+}
+.form-txt{
+    width: 20vw;
+}
+.area{
+    width: 20vw;
+    height: 15vh;
+}
+
+/* Media Queries */
+/* Tablet */
+@media (min-width: 431px) and (max-width: 800px){
+    .encabezado{
+        height: auto;
+    }
+
+    /* Home */
+    .edward, .tailoring{
+        width: 80vw;
+    }
+
+    /* Nosotros */
+    .main-history{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .history{
+        width: 85vw;
+    }
+    .mmm{
+        display: none;
+    }
+
+    /* Tienda */
+    .store-section{
+        display: grid;
+        grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        ;
+    }
+    .store-card{
+        width: 45vw;
+    }
+    .img-tienda{
+        width: 40vw;
+    }
+    .a{
+        grid-area: card1;
+    }
+    .b{
+        grid-area: card2;
+    }
+    .c{
+        grid-area: card3;
+    }
+    .d{
+        grid-area: card4;
+    }
+
+    /* Galería */
+
+    .main-gal{
+        grid-template-areas:
+        "tra1 tra2"
+        "tra1 tra2"
+        "tra3 tra4"
+        "tra3 tra4"
+        "cin1 cin2"
+        "cin3 cin4"
+        "cor1 cor2"
+        "cor3 cor4"
+        "zap1 zap2"
+        "zap3 zap4"
+        "ed ed"
+        "neg neg"
+        ;
+    }
+    .sq{
+        width: 40vw;
+        height: auto;
+    }
+    .hor{
+        width: 90vw;
+        height: auto;
+    }
+
+    /* Contacto */
+
+    .contacto{
+        width: 90vw;
+        display: grid;
+        grid-template-areas:
+        "form form"
+        "maps video"
+        ;
+        justify-items: center;
+        gap: 20px;
+    }
+    .form{
+        grid-area: form;
+    }
+    .maps{
+        grid-area: maps;
+        width: 45vw;
+    }
+    .video{
+        grid-area: video;
+        width: 45vw;
+    }
+    .form-txt{
+        width: 50vw;
+    }
+    .area{
+        width: 50vw;
+        height: 20vh;
+    }
+}
+
+/* Celular */
+@media (min-width: 320px) and (max-width: 430px){
+    .encabezado{
+        height: auto;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center; */
+    }
+    .encabezado a{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .encabezado h1{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .encabezado nav{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    /* Home */
+
+    .main-home{
+        text-align: center;
+    }
+
+    .home-cont-dest{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+    }
+    .home-suit{
+        width: 40vw;
+    }
+    .col-dest{
+        width: 35vw;
+    }
+
+    .home-btns{
+        width: 50vw;
+    }
+    .edward, .tailoring{
+        width: 75vw;
+    }
+
+    /* Historia */
+
+    .main-history{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .history{
+        width: 85vw;
+        padding: 20px;
+    }
+    .mmm{
+        display: none;
+    }
+
+    /* Tienda */
+    .store{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .store-section{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .store-card{
+        width: 90vw;
+    }
+    .img-tienda{
+        width: 75vw;
+    }
+
+    /* Galería */
+    .main-gal{
+        grid-template-areas:
+        "tra1"
+        "tra2"
+        "tra3"
+        "tra4"
+        "cin1"
+        "cin2"
+        "cin3"
+        "cin4"
+        "cor1"
+        "cor2"
+        "cor3"
+        "cor4"
+        "zap1"
+        "zap2"
+        "zap3"
+        "zap4"
+        "neg"
+        "ed"
+        ;
+    }
+    .hor, .ver, .sq{
+        width: 75vw;
+        height: auto;
+    }
+
+    /* Contacto */
+
+    .contacto{
+        flex-direction: column;
+        width: 90vw;
+        gap: 20px;
+    }
+    .form{
+        order: 1;
+    }
+    .maps{
+        order: 2;
+        width: 80vw;
+        height: 75vw;
+    }
+    .video{
+        order: 3;
+        width: 80vw;
+    }
+    .form-txt{
+        width: 50vw;
+    }
+    .area{
+        width: 50vw;
+        height: 20vh;
+    }
+}
