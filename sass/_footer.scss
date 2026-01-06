@@ -1,0 +1,35 @@
+@use "variables" as v;
+
+footer{
+    height: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    ul{
+        list-style: none;
+        @include v.Flex(row, nowrap, space-around, center);
+        gap: 15px;
+        a{
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            .rs{
+                height: 5vh;
+                width: auto;
+            }
+            .wa{
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+            }
+        }
+    }
+    // @include v.Tablet{
+    // }
+    @include v.Mobile{
+        padding: 25px;
+        gap: 25px;
+    }
+}

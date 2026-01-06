@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+// Generamos variables de colores
+$NegroCarbon: #0A0A0A;
+$DoradoSuave: #D6B679;
+$GrisHumo: #F4F4F4;
+$AzulNoche: #0E1A2A;
+$BlancoPuro: #FFFFFF;
+$Imperial: Imperial Script;
+
+// Aca debajo ya le dimos estilos a la pagina
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Imperial;
+    font-weight: 600;
+    color: $DoradoSuave;
+}
+
+body{
+    background-color: $AzulNoche;
+}
+
+// Mixins
+// Responsive Tablet
+@mixin Tablet{
+    @media (min-width: 451px) and (max-width: 800px){
+        @content;
+    }
+}
+
+// Responsive Celular
+@mixin Mobile{
+    @media (min-width: 320px) and (max-width: 450px){
+        @content;
+    }
+}
+
+// Flex
+@mixin Flex($fd, $fw, $jc, $ai){
+    display: flex;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// ----------- EXTEND ------------
+// Tienda Card
+
+// PLACEHOLDER %
+
+%store-card{
+    width: 20vw;
+    height: auto;
+    padding: 15px;
+    border: 2px solid $DoradoSuave;
+    border-radius: 15px;
+    @include Flex(column, wrap, space-around, center);
+    gap: 20px;
+}

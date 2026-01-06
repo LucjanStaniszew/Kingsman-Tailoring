@@ -1,0 +1,94 @@
+@use "variables" as v;
+
+.store{
+    @include v.Flex(column, wrap, center, center);
+    gap: 50px;
+    .store-section{
+        @include v.Flex(row, wrap, center, center);
+        gap: 20px;
+        .store-card{
+            @extend %store-card;
+            .img-tienda{
+                width: 15vw;
+                height: auto;
+            }
+            p{
+                font-size: 24px;
+            }
+        }
+        // EJEMPLO DE EXTEND
+        // .a{
+        //     @extend %store-card;
+        //     h2{
+        //         color: v.$BlancoPuro;
+        //     }
+        //     .img-tienda{
+        //         width: 15vw;
+        //         height: auto;
+        //     }
+        // }
+        // .b{
+        //     @extend %store-card;
+        //     .img-tienda{
+        //         width: 15vw;
+        //         height: auto;
+        //     }
+        // }
+        // .c{
+        //     @extend %store-card;
+        //     .img-tienda{
+        //         width: 15vw;
+        //         height: auto;
+        //     }
+        // }
+        // .d{
+        //     @extend %store-card;
+        //     h2{
+        //         color: v.$BlancoPuro;
+        //     }
+        //     .img-tienda{
+        //         width: 15vw;
+        //         height: auto;
+        //     }
+        // }
+    }
+    @include v.Tablet{
+        .store-section{
+            display: grid;
+            grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            ;
+            .store-card{
+                width: 45vw;
+                .img-tienda{
+                    width: 40vw;
+                }
+            }
+            .a{
+                grid-area: card1;
+            }
+            .b{
+                grid-area: card2;
+            }
+            .c{
+                grid-area: card3;
+            }
+            .d{
+                grid-area: card4;
+            }
+        }
+    }
+    @include v.Mobile{
+        @include v.Flex(column, nowrap, center, center);
+        .store-section{
+            @include v.Flex(column, wrap, center, center);
+            .store-card{
+                width: 90vw;
+                .img-tienda{
+                    width: 75vw;
+                }
+            }
+        }
+    }
+}

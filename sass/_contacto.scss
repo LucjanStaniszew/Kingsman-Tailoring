@@ -1,0 +1,92 @@
+@use "variables" as v;
+
+.main-cont{
+    @include v.Flex(column, nowrap, center, center);
+    .contacto{
+        @include v.Flex(row, nowrap, center, center);
+        .form{
+            order: 2;
+            @include v.Flex(column, nowrap, center, center);
+            gap: 15px;
+            width: 30vw;
+            .form-txt{
+                width: 20vw;
+            }
+            .area{
+                width: 20vw;
+                height: 15vh;
+            }
+            .form-btns{
+                display: flex;
+                gap: 20px;
+                .form-btn{
+                    border: 3px solid v.$DoradoSuave;
+                    background-color: v.$AzulNoche;
+                    padding: 10px;
+                    border-radius: 15px;
+                }
+            }
+        }
+        .maps{
+            order: 1;
+            width: 30vw;
+        }
+        .video{
+            order: 3;
+            width: 30vw;
+        }
+    }
+    @include v.Tablet{
+        .contacto{
+            width: 90vw;
+            display: grid;
+            grid-template-areas:
+            "form form"
+            "maps video"
+            ;
+            justify-items: center;
+            gap: 20px;
+            .form{
+                grid-area: form;
+                .area{
+                    width: 50vw;
+                    height: 20vw;
+                }
+            }
+            .maps{
+                grid-area: maps;
+                width: 45vw;
+            }
+            .video{
+                grid-area: video;
+                width: 45vw;
+            }
+        }
+    }
+    @include v.Mobile{
+        .contacto{
+            flex-direction: column;
+            width: 90vw;
+            gap: 20px;
+            .form{
+                order: 1;
+                .form-txt{
+                    width: 50vw;
+                }
+                .area{
+                    width: 50vw;
+                    height: 20vh;
+                }
+            }
+            .maps{
+                order: 2;
+                width: 80vw;
+                height: 40vh;
+            }
+            .video{
+                order: 3;
+                width: 80vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use "variables" as v;
+
+.main-history{
+    @include v.Flex(row, nowrap, center, center);
+    .history{
+        width: 65vw;
+        padding: 50px;
+        @include v.Flex(column, wrap, center, center);
+        gap: 20px;
+        .edward, .tailoring{
+            width: 50vw;
+            height: auto;
+        }
+        .story{
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+    .mmm{
+        width: 30vw;
+        height: auto;
+    }
+    @include v.Tablet{
+        @include v.Flex(column, wrap, center, center);
+        .history{
+            width: 85vw;
+            .edward, .tailoring{
+                width: 80vw;
+            }
+        }
+        .mmm{
+            display: none;
+        }
+    }
+    @include v.Mobile{
+        @include v.Flex(column, wrap, center, center);
+        .history{
+            width: 85vw;
+            padding: 20px;
+            .edward, .tailoring{
+                width: 75vw;
+            }
+        }
+        .mmm{
+            display: none;
+        }
+    }
+}

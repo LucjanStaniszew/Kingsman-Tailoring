@@ -1,0 +1,32 @@
+@use "variables" as v;
+
+.encabezado{
+    position: sticky;
+    top: 0;
+    background-color: #0E1A2A;
+    padding: 0 25px;
+    height: 10vh;
+
+    .navbar-toggler{
+        background-color: v.$DoradoSuave;
+    }
+    .navbar-nav{
+        .nav-link, .nav-link.active{
+            color: v.$DoradoSuave;
+        }
+        .nav-link.active{
+            border: 1px solid v.$DoradoSuave;
+            border-radius: 10px;
+        }
+    }
+    .logo{
+        height: 10vh;
+        width: auto;
+    }
+    @include v.Tablet{
+        height: auto;
+    }
+    @include v.Mobile{
+        height: auto;
+    }
+}

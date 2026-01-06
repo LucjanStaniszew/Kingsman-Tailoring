@@ -1,0 +1,131 @@
+@use "variables" as v;
+
+.main-gal{
+    display: grid;
+    grid-template-areas:
+    "cin1 tra1 tra2 cor1"
+    "cin2 tra1 tra2 cor2"
+    "cin3 tra3 tra4 cor3"
+    "cin4 tra3 tra4 cor4"
+    "zap1 zap2 zap3 zap4"
+    "ed ed neg neg"
+    ;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    .sq{
+        width: 20vw;
+        height: 20vw;
+    }
+    .ver{
+        height: 60vh;
+    }
+    .hor{
+        width: 40vw;
+        height: auto;
+    }
+    .cin1{
+        grid-area: cin1;
+    }
+    .cin2{
+        grid-area: cin2;
+    }
+    .cin3{
+        grid-area: cin3;
+    }
+    .cin4{
+        grid-area: cin4;
+    }
+    .tra1{
+        grid-area: tra1;
+    }
+    .tra2{
+        grid-area: tra2;
+    }
+    .tra3{
+        grid-area: tra3;
+    }
+    .tra4{
+        grid-area: tra4;
+    }
+    .cor1{
+        grid-area: cor1;
+    }
+    .cor2{
+        grid-area: cor2;
+    }
+    .cor3{
+        grid-area: cor3;
+    }
+    .cor4{
+        grid-area: cor4;
+    }
+    .zap1{
+        grid-area: zap1;
+    }
+    .zap2{
+        grid-area: zap2;
+    }
+    .zap3{
+        grid-area: zap3;
+    }
+    .zap4{
+        grid-area: zap4;
+    }
+    .ed{
+        grid-area: ed;
+    }
+    .neg{
+        grid-area: neg;
+    }
+    @include v.Tablet{
+        grid-template-areas:
+        "tra1 tra2"
+        "tra1 tra2"
+        "tra3 tra4"
+        "tra3 tra4"
+        "cin1 cin2"
+        "cin3 cin4"
+        "cor1 cor2"
+        "cor3 cor4"
+        "zap1 zap2"
+        "zap3 zap4"
+        "ed ed"
+        "neg neg"
+        ;
+        .sq{
+            width: 40vw;
+            height: auto;
+        }
+        .hor{
+            width: 90vw;
+            height: auto;
+        }
+    }
+    @include v.Mobile{
+        grid-template-areas:
+        "tra1"
+        "tra2"
+        "tra3"
+        "tra4"
+        "cin1"
+        "cin2"
+        "cin3"
+        "cin4"
+        "cor1"
+        "cor2"
+        "cor3"
+        "cor4"
+        "zap1"
+        "zap2"
+        "zap3"
+        "zap4"
+        "neg"
+        "ed"
+        ;
+        .hor, .ver, .sq{
+            width: 75vw;
+            height: auto;
+        }
+    }
+}
