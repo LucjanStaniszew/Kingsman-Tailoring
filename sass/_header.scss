@@ -18,6 +18,9 @@
             border: 1px solid v.$DoradoSuave;
             border-radius: 10px;
         }
+        .nav-link:hover{
+            animation: invert 2s forwards;
+        }
     }
     .logo{
         height: 10vh;
@@ -28,5 +31,14 @@
     }
     @include v.Mobile{
         height: auto;
+    }
+}
+
+
+@keyframes invert {
+    100%{
+        background-color: v.$DoradoSuave;
+        color: v.$AzulNoche;
+        border-radius: 15px;
     }
 }

@@ -43,6 +43,9 @@ body {
   border: 1px solid #D6B679;
   border-radius: 10px;
 }
+.encabezado .navbar-nav .nav-link:hover {
+  animation: invert 2s forwards;
+}
 .encabezado .logo {
   height: 10vh;
   width: auto;
@@ -58,6 +61,13 @@ body {
   }
 }
 
+@keyframes invert {
+  100% {
+    background-color: #D6B679;
+    color: #0E1A2A;
+    border-radius: 15px;
+  }
+}
 footer {
   height: 10vh;
   display: flex;
@@ -87,6 +97,8 @@ footer ul a .wa {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  animation: vibrate 2s ease-in-out infinite;
+  animation-delay: 2s;
 }
 @media (min-width: 320px) and (max-width: 450px) {
   footer {
@@ -95,6 +107,41 @@ footer ul a .wa {
   }
 }
 
+@keyframes vibrate {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  10% {
+    transform: translateX(0) translateY(-15px);
+  }
+  20% {
+    transform: translateX(-15px) translateY(-15px);
+  }
+  30% {
+    transform: translateX(15px) translateY(-15px);
+  }
+  40% {
+    transform: translateX(-15px) translateY(-15px);
+  }
+  50% {
+    transform: translateX(15px) translateY(-15px);
+  }
+  60% {
+    transform: translateX(-15px) translateY(-15px);
+  }
+  70% {
+    transform: translateX(15px) translateY(-15px);
+  }
+  80% {
+    transform: translateX(-15px) translateY(-15px);
+  }
+  90% {
+    transform: translateX(15px) translateY(-15px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
 .main-home {
   display: flex;
   flex-direction: column;
@@ -267,6 +314,10 @@ footer ul a .wa {
   align-items: center;
   gap: 20px;
 }
+.main-gal img:hover {
+  animation: scale 3s forwards ease;
+  animation-delay: 1s;
+}
 .main-gal .sq {
   width: 20vw;
   height: 20vw;
@@ -333,6 +384,9 @@ footer ul a .wa {
   grid-area: neg;
 }
 @media (min-width: 451px) and (max-width: 800px) {
+  .main-gal img:hover {
+    animation: none;
+  }
   .main-gal {
     grid-template-areas: "tra1 tra2" "tra1 tra2" "tra3 tra4" "tra3 tra4" "cin1 cin2" "cin3 cin4" "cor1 cor2" "cor3 cor4" "zap1 zap2" "zap3 zap4" "ed ed" "neg neg";
   }
@@ -346,6 +400,9 @@ footer ul a .wa {
   }
 }
 @media (min-width: 320px) and (max-width: 450px) {
+  .main-gal img:hover {
+    animation: none;
+  }
   .main-gal {
     grid-template-areas: "tra1" "tra2" "tra3" "tra4" "cin1" "cin2" "cin3" "cin4" "cor1" "cor2" "cor3" "cor4" "zap1" "zap2" "zap3" "zap4" "neg" "ed";
   }
@@ -355,6 +412,16 @@ footer ul a .wa {
   }
 }
 
+@keyframes scale {
+  0% {
+    scale: 1;
+    border-radius: 25px;
+  }
+  100% {
+    scale: 1.5;
+    border-radius: 25px;
+  }
+}
 .main-history {
   display: flex;
   flex-direction: row;

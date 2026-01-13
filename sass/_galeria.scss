@@ -13,6 +13,10 @@
     justify-items: center;
     align-items: center;
     gap: 20px;
+    img:hover{
+        animation: scale 3s forwards ease;
+        animation-delay: 1s;
+    }
     .sq{
         width: 20vw;
         height: 20vw;
@@ -79,6 +83,9 @@
         grid-area: neg;
     }
     @include v.Tablet{
+        img:hover{
+            animation: none;
+        }
         grid-template-areas:
         "tra1 tra2"
         "tra1 tra2"
@@ -103,6 +110,9 @@
         }
     }
     @include v.Mobile{
+        img:hover{
+            animation: none;
+        }
         grid-template-areas:
         "tra1"
         "tra2"
@@ -127,5 +137,16 @@
             width: 75vw;
             height: auto;
         }
+    }
+}
+
+@keyframes scale {
+    0%{
+        scale: 1;
+        border-radius: 25px;
+    }
+    100%{
+        scale: 1.5;
+        border-radius: 25px;
     }
 }

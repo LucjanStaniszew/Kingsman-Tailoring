@@ -1,7 +1,0 @@
-SASS
-1- Estilizar en un solo archivo
-2- Ingresar variables y utilizarlas
-3- Uso de anidación en header main y footer
-4- Uso de Partials
-5- Uso de Extend
-6- Uso de Mixin
