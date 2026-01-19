@@ -313,10 +313,15 @@ footer ul a .wa {
   justify-items: center;
   align-items: center;
   gap: 20px;
+  overflow: hidden;
+}
+.main-gal img {
+  border-radius: 25px;
+  transition: all 2s ease-in-out;
+  transform-origin: center;
 }
 .main-gal img:hover {
-  animation: scale 3s forwards ease;
-  animation-delay: 1s;
+  scale: 1.5;
 }
 .main-gal .sq {
   width: 20vw;
