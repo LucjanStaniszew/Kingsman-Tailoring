@@ -5,25 +5,29 @@
     top: 0;
     background-color: #0E1A2A;
     padding: 0 25px;
-    height: 10vh;
 
     .navbar-toggler{
         background-color: v.$DoradoSuave;
     }
     .navbar-nav{
+        font-size: 1.5rem;
         .nav-link, .nav-link.active{
             color: v.$DoradoSuave;
+            border-radius: 15px;
+            transition: all 1s ease;
         }
         .nav-link.active{
             border: 1px solid v.$DoradoSuave;
             border-radius: 10px;
+            transition: all 0.5s ease;
         }
         .nav-link:hover{
-            animation: invert 2s forwards;
+            background-color: v.$DoradoSuave;
+            color: v.$AzulNoche;
         }
     }
     .logo{
-        height: 10vh;
+        height: 15vh;
         width: auto;
     }
     @include v.Tablet{
@@ -31,14 +35,5 @@
     }
     @include v.Mobile{
         height: auto;
-    }
-}
-
-
-@keyframes invert {
-    100%{
-        background-color: v.$DoradoSuave;
-        color: v.$AzulNoche;
-        border-radius: 15px;
     }
 }

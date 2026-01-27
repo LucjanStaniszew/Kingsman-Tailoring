@@ -2,6 +2,10 @@
 
 .main-cont{
     @include v.Flex(column, nowrap, center, center);
+    h2{
+        font-size: 2.5rem;
+        font-weight: bold
+    }
     .contacto{
         @include v.Flex(row, nowrap, center, center);
         .form{
@@ -9,31 +13,46 @@
             @include v.Flex(column, nowrap, center, center);
             gap: 15px;
             width: 30vw;
+            label{
+                font-size: 1.5rem;
+            }
             .form-txt{
                 width: 20vw;
+                font-size: 1.5rem;
+                padding: 0 15px;
             }
             .area{
+                font-size: 1.5rem;
                 width: 20vw;
                 height: 15vh;
+                padding: 0 15px;
             }
             .form-btns{
                 display: flex;
                 gap: 20px;
+                font-size: 1.2rem;
                 .form-btn{
                     border: 3px solid v.$DoradoSuave;
                     background-color: v.$AzulNoche;
                     padding: 10px;
                     border-radius: 15px;
+                    transition: all 1s ease;
+                    &:hover{
+                        background-color: v.$DoradoSuave;
+                        color: v.$AzulNoche;
+                    }
                 }
             }
         }
         .maps{
             order: 1;
             width: 30vw;
+            height: 50vh;
         }
         .video{
             order: 3;
             width: 30vw;
+            height: 50vh;
         }
     }
     @include v.Tablet{

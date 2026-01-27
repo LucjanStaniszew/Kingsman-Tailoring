@@ -7,13 +7,13 @@
         width: 80vw;
         @include v.Flex(column, nowrap, center, center);
         gap: 20px;
-        .home.title{
+        .home-title{
             color: v.$DoradoSuave;
-            font-size: 48px;
+            font-size: 3.5rem;
         }
-        .home.title2{
+        .home-title2{
             color: v.$DoradoSuave;
-            font-size: 32px;
+            font-size: 2.5rem;
         }
         .home-cont-dest{
             display: grid;
@@ -49,9 +49,14 @@
             border-radius: 15px;
             padding: 10px;
             color: v.$DoradoSuave;
-            font-size: 20px;
+            font-size: 1.5rem;
             width: 15vw;
             text-align: center;
+            text-decoration: none;
+            &:hover{
+                    background-color: v.$DoradoSuave;
+                    color: v.$AzulNoche;
+                } 
         }
         .edward, .tailoring{
             width: 50vw;
